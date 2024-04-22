@@ -4,7 +4,8 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: print something1
-        run: echo "Hi This is my first workflow"
-      - name: print something2
-        run: echo "Hi This is my second workflow"
+      - name: print USERNAME
+        run: |
+          echo "my username is ${{ secrets.USERNAME }}"
+      - name: print PASSWORD
+        run: echo "my password is ${{ secrets.PASSWORD }}"
